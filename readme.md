@@ -4,7 +4,7 @@ This repository contains a demonstration of splitting work across different serv
 
 ## Article Details
 - **Author:** Adeleke Joshua A.
-- **Date:** 2024/05/04
+- **Date:** 2024/05/06
 - **Medium Article Link:** [Message Queuing with RabbitMQ: Splitting Work for Faster API Calls](https://lekejosh.medium.com/message-queuing-with-rabbitmq-splitting-work-for-faster-api-calls-80deb37aaaeb)
 
 ## Prerequisites
