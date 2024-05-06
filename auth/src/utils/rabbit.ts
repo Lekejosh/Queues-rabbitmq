@@ -1,13 +1,17 @@
 import * as amqp from "amqplib";
 import { RABBITMQ } from "../config";
-export let connect:amqp.Connection;
-async function connectToRabbitMQ() {
+
+let connection: amqp.Connection | null = null;
+
+export async function connectToRabbitMQ(): Promise<amqp.Connection> {
   try {
-    connect = await amqp.connect(RABBITMQ!);
-    console.log("Rabbit MQ Connected");
+    if (!connection) {
+      connection = await amqp.connect(RABBITMQ!);
+      console.log("Rabbit MQ Connected");
+    }
+    return connection;
   } catch (error) {
     console.error("Error connecting to RabbitMQ:", error);
+    throw error;
   }
 }
-
-connectToRabbitMQ();

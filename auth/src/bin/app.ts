@@ -4,6 +4,7 @@ import { createServer, Server as HTTPServer } from "http";
 import parser from "body-parser";
 import { PORT } from "../config";
 import router from "../route";
+import { connectToRabbitMQ } from "../utils/rabbit";
 
 export class Server {
   private httpServer!: HTTPServer;
@@ -36,6 +37,7 @@ export class Server {
   }
   
   public listen(callback: (port: number) => void): void {
+    connectToRabbitMQ();
     this.httpServer.listen(this.PORT, () => {
       callback(this.PORT);
     });

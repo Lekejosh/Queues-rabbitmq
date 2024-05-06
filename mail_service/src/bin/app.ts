@@ -1,7 +1,6 @@
 import "dotenv/config";
 import express, { Application, Request, Response } from "express";
 import { createServer, Server as HTTPServer } from "http";
-import parser from "body-parser";
 import { PORT } from "../config";
 import { connectToRabbitMQ } from "../utils/rabbit";
 export class Server {
@@ -15,12 +14,7 @@ export class Server {
 
   private initalize(): void {
     this.app = express();
-    (this.httpServer = createServer(this.app)), this.configureApp();
-    this.configureRoutes();
-  }
-
-  private configureApp(): void {
-    this.app.use(parser.json());
+    (this.httpServer = createServer(this.app)), this.configureRoutes();
   }
 
   private configureRoutes(): void {
@@ -30,7 +24,6 @@ export class Server {
         status: "UP!",
       });
     });
-
   }
   public listen(callback: (port: number) => void): void {
     connectToRabbitMQ();
