@@ -5,7 +5,7 @@ This repository contains a demonstration of splitting work across different serv
 ## Article Details
 - **Author:** Adeleke Joshua A.
 - **Date:** 2024/05/04
-- **Medium Article Link:** [Link](https://lekejosh.medium.com/building-a-scalable-node-js-backend-separating-request-handling-and-background-jobs-eca17209fbcb)
+- **Medium Article Link:** [Link]((https://lekejosh.medium.com/message-queuing-with-rabbitmq-splitting-work-for-faster-api-calls-80deb37aaaeb))
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ This repository contains a demonstration of splitting work across different serv
 
 ## Medium Article
 
-For a detailed explanation and walkthrough of this project, please refer to the accompanying Medium article: [Splitting Work for Faster API Calls with RabbitMQ](https://medium.com/lekejosh/splitting-work-for-faster-api-calls-with-rabbitmq).
+For a detailed explanation and walkthrough of this project, please refer to the accompanying Medium article: [Message Queuing with RabbitMQ: Splitting Work for Faster API Calls](https://lekejosh.medium.com/message-queuing-with-rabbitmq-splitting-work-for-faster-api-calls-80deb37aaaeb).
 
 ## Getting Started
 
